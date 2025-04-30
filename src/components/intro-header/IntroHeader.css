@@ -1,0 +1,107 @@
+/* .intro-header-main {
+    margin-top: 270px;
+    padding: 175px;
+    position: absolute;
+    z-index: 1;
+}
+
+.intro-header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+}
+.intro-header-container p {
+    color: white;
+    font-size: 24px;
+}
+
+.intro-header-container hr {
+    width: 600px;
+    background-color: white;
+}  
+.intro-header-container button {
+    width: 200px;
+    background: transparent;
+    border: 3px solid white;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0; 
+  }
+  
+  .intro-header-container button:hover {
+    background-color: white;
+    color: black;
+  }
+   */
+
+
+
+
+   .intro-header-main {
+    margin-top: 270px;
+    padding: 175px;
+    position: absolute;
+    z-index: 1;
+}
+
+.intro-header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.intro-header-container p {
+    color: white;
+    font-size: 24px;
+}
+
+.intro-header-container hr {
+    width: 600px;
+    background-color: white;
+}
+
+.intro-header-container button {
+    width: 200px;
+    background: transparent;
+    border: 3px solid white;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0; /* sharp edges */
+}
+
+.intro-header-container button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* --- Responsive for 800px and below --- */
+@media (max-width: 800px) {
+  .intro-header-main {
+    margin-top: 100px; /* Smaller margin */
+    padding: 50px 30px; /* Less padding */
+  }
+
+  .intro-header-container {
+    gap: 20px;
+    
+  }
+
+  .intro-header-container p {
+    font-size: 18px; /* Smaller text */
+  }
+
+  .intro-header-container hr {
+    width: 100%; /* Full width on small screens */
+    
+  }
+
+
+}

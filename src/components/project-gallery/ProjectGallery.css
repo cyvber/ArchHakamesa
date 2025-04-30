@@ -1,0 +1,63 @@
+.project-gallery {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  
+  .selected-image-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .selected-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
+  }
+  
+  .thumbnails-container {
+    margin-top: 1rem;
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+  }
+  
+  .thumbnails-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar Chrome/Safari */
+  }
+  
+  .thumbnail {
+    height: 80px;
+    width: auto;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s, transform 0.3s;
+    border-radius: 6px;
+    flex-shrink: 0; /* Prevent thumbnails from shrinking */
+  }
+  
+  .thumbnail:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  
+  .thumbnail.active {
+    opacity: 1;
+    border: 2px solid #aaa; /* Highlight active thumbnail */
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transform: scale(1.02);
+    animation: fadeInAnimation 1.5s ease forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  

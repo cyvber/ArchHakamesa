@@ -1,0 +1,43 @@
+.view-project-page {
+    min-height: 100vh;
+    padding: 180px 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+.view-project-page h1 {
+    font-size: 36px;
+    font-weight: 100;
+    color: white;
+}
+.date {
+    font-size: 12px;
+    color: #bfbfbf;
+}
+  .project-full-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 30px;
+  }
+  
+  .project-description h1{
+    color: white;
+    font-size: 20px;
+}
+.project-description p{
+    color: #aeaeae;
+    font-size: 18px;
+}
+.project-description {
+    align-self: flex-start; 
+}
+
+
+
+@media (max-width: 800px) {
+    .view-project-page {
+        padding: 180px 20px;
+    }
+}

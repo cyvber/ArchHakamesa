@@ -1,0 +1,24 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap');
+
+
+html {
+  direction: rtl;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  background-color: black;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;  
+  font-family: 'Assistant', sans-serif;
+}
+ 

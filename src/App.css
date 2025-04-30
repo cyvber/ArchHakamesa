@@ -1,0 +1,39 @@
+.main {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.main-header {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+  
+}
+
+.parallax-bg {
+  background-image: url('./assets/imgs/enhanced_image6-b.png');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+}
+
+.next-section {
+  position: relative;
+  z-index: 2;
+  background: #111;
+  color: white;
+  padding: 100px;
+  height: 30vh;
+}
+/* --- Responsive for 800px and below --- */
+@media (max-width: 800px) {
+  .main-header {
+    height: 90vh; 
+  }
+}
