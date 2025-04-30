@@ -31,7 +31,7 @@
   padding: 100px;
   height: 30vh;
 }
-/* --- Responsive for 800px and below --- */
+
 @media (max-width: 800px) {
   .main-header {
     height: 90vh; 
