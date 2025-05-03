@@ -15,9 +15,15 @@ const IntroFooter = () => {
                     </Link>
                 </div>
                 <div className="socials">
-                    <img src={insta} alt="אינסטגרם" />
-                    <img src={whatsapp} alt="וואטסאפ" />
-                    <img src={facebook} alt="פייסבוק" />
+                    <a href='https://www.instagram.com/hakamesa_' target='_blank' rel='noopener noreferrer'>
+                        <img src={insta} alt="אינסטגרם" />
+                    </a>
+                    <a href='https://wa.me/972542880545' target='_blank' rel='noopener noreferrer'>
+                        <img src={whatsapp} alt="וואטסאפ" />
+                    </a>
+                    <a href='https://www.facebook.com/YOUR_PAGE_NAME' target='_blank' rel='noopener noreferrer'>
+                        <img src={facebook} alt="פייסבוק" />
+                    </a>
                 </div>
                 <div className="contact">
                     <p>054-288-0545</p>
