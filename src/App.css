@@ -13,7 +13,8 @@
 }
 
 .parallax-bg {
-  background-image: url('./assets/imgs/enhanced_image6-b.png');
+  /* background-image: url('./assets/imgs/enhanced_image6-b.png'); */
+  background-image: url('./assets/imgs/enhanced_image4.png');
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -23,13 +24,18 @@
   z-index: -1;
 }
 
-.next-section {
+.main-body {
   position: relative;
   z-index: 2;
-  background: #111;
-  color: white;
-  padding: 100px;
-  height: 30vh;
+  background-color: black;
+  padding: 0 180px;
+}
+
+
+@media (max-width: 1000px) {
+  .main-body {
+    padding: 0 50px;
+  }
 }
 
 @media (max-width: 800px) {

@@ -64,6 +64,10 @@ import img5_11 from '../project-imgs/project5/img11.jpg';
 export interface Project {
   id: number;
   name: string;
+  land_size: number;
+  house_size: number;
+  build_duration: string;
+  floors: number;
   description: string;
   image: string;
   images_array: string[];
@@ -75,7 +79,11 @@ export const projects: Project[] = [
   {
     id: 1,
     name: "Modern Villa",
-    description: "תכנון וייצוב וילה מודרנית עם קווים נקיים, פתחים רחבים, ועיצוב פנים מרהיב שמתאים למשפחה צעירה.",
+    land_size: 1000,
+    house_size: 450,
+    build_duration: "2021-2024",
+    floors: 3,
+    description: " עיצוב פנטהאוז יוקרתי עם דגש על אלגנטיות, שימוש בחומרים איכותיים ונוף פנורמי , עיצוב פנטהאוז יוקרתי עם דגש על אלגנטיות, שימוש בחומרים איכותיים ונוף פנורמי,תכנון וייצוב וילה מודרנית עם קווים נקיים, פתחים רחבים, ועיצוב פנים מרהיב שמתאים למשפחה צעירה.",
     image: img_project1,
     images_array: [img1_5, img1_6],
     video: "",
@@ -84,7 +92,11 @@ export const projects: Project[] = [
   {
     id: 2,
     name: "Urban Apartment",
-    description: "שדרוג דירת מגורים עירונית תוך שילוב אלמנטים מודרניים עם תחושת חום וביתיות.",
+    land_size: 1000,
+    house_size: 450,
+    build_duration: "2021-2024",
+    floors: 3,
+    description: " , עיצוב פנטהאוז יוקרתי עם דגש על אלגנטיות, שימוש בחומרים איכותיים ונוף פנורמי, .עיצוב פנטהאוז יוקרתי עם דגש על אלגנטיות, שימוש בחומרים איכותיים ונוף פנורמי שדרוג דירת מגורים עירונית תוך שילוב אלמנטים מודרניים עם תחושת חום וביתיות.",
     image: img_project2,
     images_array: [],
     video: "",
@@ -93,7 +105,11 @@ export const projects: Project[] = [
   {
     id: 3,
     name: "Office Renovation",
-    description: "עיצוב מחדש של משרד תוך מיקוד בנוחות, פונקציונליות ומראה מקצועי ונקי.",
+    land_size: 1000,
+    house_size: 450,
+    build_duration: "2021-2024",
+    floors: 3,
+    description: "עיצוב מחדש של משרד תוך מיקוד בנוחות, פונקציונליות ומראה מקצועי ונקי. עיצוב פנטהאוז יוקרתי עם דגש על אלגנטיות, שימוש בחומרים איכותיים ונוף פנורמי, עיצוב פנטהאוז יוקרתי עם דגש על אלגנטיות, שימוש בחומרים איכותיים ונוף פנורמי. עיצוב פנטהאוז יוקרתי עם דגש על אלגנטיות, שימוש בחומרים איכותיים ונוף פנורמי.",
     image: img_project3,
     images_array: [img2_1, img2_2, img2_3, img2_4, img2_5, img2_6, img2_7],
     video: "",
@@ -102,6 +118,10 @@ export const projects: Project[] = [
   {
     id: 4,
     name: "Luxury Penthouse",
+    land_size: 1000,
+    house_size: 450,
+    build_duration: "2021-2024",
+    floors: 3,
     description: "עיצוב פנטהאוז יוקרתי עם דגש על אלגנטיות, שימוש בחומרים איכותיים ונוף פנורמי.",
     image: img_project4,
     images_array: [
@@ -114,6 +134,10 @@ export const projects: Project[] = [
   {
     id: 5,
     name: "Family House Redesign",
+    land_size: 1000,
+    house_size: 450,
+    build_duration: "2021-2024",
+    floors: 3,
     description: "פרויקט חידוש בית משפחתי עם פתיחת חללים ויצירת קשר חזק יותר בין החוץ לפנים.",
     image: img_project5,
     images_array: [
@@ -126,6 +150,10 @@ export const projects: Project[] = [
   {
     id: 6,
     name: "Family House Redesign",
+    land_size: 1000,
+    house_size: 450,
+    build_duration: "2021-2024",
+    floors: 3,
     description: "פרויקט חידוש בית משפחתי עם פתיחת חללים ויצירת קשר חזק יותר בין החוץ לפנים.",
     image: img3_2,
     images_array: [

@@ -1,0 +1,67 @@
+.carousel-section {
+    padding: 160px 0;
+  }
+  .carousel-section h2 {
+    font-size: 28px;
+    margin-bottom: 100px;
+  }
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .arrow-button {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: opacity 0.3s;
+    z-index: 1;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+  }
+  
+  .carousel::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+  
+  .carousel-service-card {
+    flex: 0 0 auto;
+    width: 250px;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .carousel-service-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 12px;
+  }
+  
+  .carousel-service-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .carousel-service-description {
+    font-size: 0.95rem;
+  }
+  

@@ -8,6 +8,9 @@ import ViewProjectPage from './pages/project-view/ViewProjectPage';
 import ServicesListPage from './pages/services/ServicesListPage';
 import ContactPage from './pages/contact/ContactPage';
 import AboutPage from './pages/about/AboutPage';
+import ProjectList from './components/projects-list-main/ProjectList';
+import ServicesCarousel from './components/services-carousel/ServicesCarousel';
+import ContactSection from './components/contact-section/ContactSection';
 
 function App() {
   return (
@@ -23,7 +26,12 @@ function App() {
                   <IntroHeader />
                 </div>
               </header>
-              <IntroFooter />
+              <div className="main-body">
+                <ProjectList />
+                <ServicesCarousel />
+                <ContactSection />
+                <IntroFooter />
+              </div>
             </>
           } />
           <Route path="/projects" element={<ProjectsListPage />} />

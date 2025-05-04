@@ -1,0 +1,114 @@
+.project-list {
+    padding: 3rem 0;
+  }
+  
+  .project-list h2 {
+    font-size: 1.875rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: #ffffff;
+  }
+
+  .project-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .project-card-main {
+    border: 1px solid #808080;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .project-image-main {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .project-overlay-main {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 1.5rem;
+    text-align: right;
+    
+    transform: translateY(100%);
+    clip-path: polygon(100% 100%, 100% 40%, 50% 100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .project-card-main:hover .project-overlay-main {
+    transform: translateY(0%);
+  }
+  .project-image-main img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+  }
+  .project-content button {
+    width: 160px;
+    background: transparent;
+    border: 3px solid white;
+    color: white;
+    padding: 1rem 1rem;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0;
+  }
+  .project-content button:hover {
+    background-color: white;
+    color: black;
+  }
+  .project-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+  }
+  
+  .project-description {
+    color: #828282;
+  }
+
+
+  @media (max-width: 1200px) {
+
+    .project-overlay-main {
+        clip-path: polygon(100% 100%, 100% 40%, 40% 100%);
+    }
+    .overlay-main-content {
+        font-size: 15px;
+    }
+}
+  
+@media (max-width: 1000px) {
+    .project-overlay-main {
+        clip-path: polygon(100% 100%, 100% 30%, 30% 100%);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .project-overlay-main {
+        clip-path: polygon(100% 100%, 100% 17%, 10% 100%);
+    }
+    .overlay-main-content {
+        font-size: 14px;
+    }
+}
