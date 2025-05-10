@@ -1,6 +1,6 @@
 import ContactPage from '../../pages/contact/ContactPage';
 import './ContactSection.css'
-import contact_image from '../../assets/imgs/building-belowview.jpg';
+// import contact_image from '../../assets/imgs/building-belowview.jpg';
 import abouts from '../../assets/data/abouts';
 
 const ContactSection = () => {

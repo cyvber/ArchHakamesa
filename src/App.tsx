@@ -12,7 +12,7 @@ import ServicesCarousel from './components/services-carousel/ServicesCarousel';
 import ContactSection from './components/contact-section/ContactSection';
 import ProjectSection from './sections/projects-section/ProjectSection';
 import AboutSection from './sections/about-section/AboutSection';
-import abouts from './assets/data/abouts';
+// import abouts from './assets/data/abouts';
 
 function App() {
   return (
