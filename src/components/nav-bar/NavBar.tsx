@@ -29,9 +29,11 @@ const NavBar = () => {
           <Link to="/">ראשי</Link>
           <Link to="/projects">פרויקטים</Link>
           <Link to="/services">שירותים</Link>
+          <Link to="/" onClick={() => sessionStorage.setItem('scrollToContact', 'true')}>צור קשר</Link>
+
           {/* <Link to="/about">אודות</Link> */}
-          <a href="#contact">צור קשר</a>
-          {/* <Link to="/contact">צור קשר</Link> */}
+          {/* <a href="/#contact">צור קשר</a> */}
+          {/* <Link to="/#contact">צור קשר</Link> */}
         </div>
 
         {/* Mobile Menu Icon */}

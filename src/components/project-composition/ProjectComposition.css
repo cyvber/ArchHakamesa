@@ -5,14 +5,14 @@
     justify-content: space-between;
     /* gap: 2rem; */
     padding: 50px;
-    background: linear-gradient(to right,rgb(239, 239, 233) 30%, rgb(51, 51, 51, 0.2));  
+    /* background: linear-gradient(to right,rgb(239, 239, 233) 30%, rgb(51, 51, 51, 0.2));   */
     
     
   }
   
   .project-composition.reverse {
     flex-direction: row;
-    background: linear-gradient(to left,rgb(239, 239, 233) 30%, rgb(51, 51, 51, 0.2));  
+    /* background: linear-gradient(to left,rgb(239, 239, 233) 30%, rgb(51, 51, 51, 0.2));   */
   }
   
   .project-text {
@@ -106,8 +106,82 @@
     /* box-shadow: 0px 4px 12px rgba(0,0,0,0.08); */
     /* border-radius: 8px */
   }
+
+  /* At 1200px and below - adjust padding and layout */
+@media screen and (max-width: 1200px) {
+    .project-composition {
+      padding: 30px;
+    }
   
-  @media (max-width: 768px) {
+
+  }
+  
+  /* At 800px and below - stack image on top, text below */
+  @media screen and (max-width: 800px) {
+    .project-composition,
+    .project-composition.reverse {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 20px;
+      
+    }
+  
+    .project-text .watermark,
+    .project-composition.reverse .project-text .watermark {
+      margin: -50px auto;
+      max-width: 250px;
+    }
+    .project-composition.reverse .project-text .watermark {
+        left: 0;
+        margin-left: 0;
+    }
+  
+    .project-image img {
+      height: auto;
+    }
+
+  
+    .project-name {
+      margin: 20px 20px;
+      text-align: center;
+    }
+  
+    .project-description,
+    .project-text button {
+      margin: 0 20px;
+      text-align: center;
+    }
+  
+    .project-text button {
+      margin-top: 40px;
+    }
+  }
+  
+  /* At 600px and below - slightly tighter layout */
+  @media screen and (max-width: 600px) {
+    .project-name {
+      font-size: 1.4rem;
+    }
+  
+      
+    .project-overlay-container {
+        clip-path: none;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+      }
+    .project-description {
+      font-size: 0.95rem;
+    }
+  
+    .project-text button {
+      width: 140px;
+      font-size: 14px;
+    }
+  }
+  
+  
+  /* @media (max-width: 768px) {
     .project-composition,
     .project-composition.reverse {
       flex-direction: column;
@@ -119,4 +193,4 @@
       margin-top: 1rem;
     }
   }
-  
+   */
