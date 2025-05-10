@@ -56,31 +56,35 @@
 }
 
 .intro-header-container p {
-    color: white;
-    font-size: 24px;
+    color: #2F2F2F;
+    font-size: clamp(2rem, 4vw, 2rem);
+    font-weight: 400;
 }
 
 .intro-header-container hr {
     width: 600px;
-    background-color: white;
+    border: 2px solid black;
 }
 
 .intro-header-container button {
-    width: 200px;
-    background: transparent;
-    border: 3px solid white;
-    color: white;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 0; /* sharp edges */
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.7); /* subtle white overlay */
+  backdrop-filter: blur(4px);                /* glassmorphism effect */
+  border: 3px solid rgba(0, 0, 0, 0.6);
+  color: #000000;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .intro-header-container button:hover {
-    background-color: white;
-    color: black;
+  background-color: rgba(0, 0, 0);
+  color: #ffffff;
 }
+
 
 /* --- Responsive for 800px and below --- */
 @media (max-width: 800px) {

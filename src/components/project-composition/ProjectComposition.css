@@ -1,0 +1,122 @@
+.project-composition {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 2rem; */
+    padding: 50px;
+    background: linear-gradient(to right,rgb(239, 239, 233) 30%, rgb(51, 51, 51, 0.2));  
+    
+    
+  }
+  
+  .project-composition.reverse {
+    flex-direction: row;
+    background: linear-gradient(to left,rgb(239, 239, 233) 30%, rgb(51, 51, 51, 0.2));  
+  }
+  
+  .project-text {
+    flex: 1;
+    position: relative;
+  }
+  .project-composition.reverse .project-text .watermark {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: -90px;
+  }
+  .project-text .watermark {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 350px;
+    width: 100%;
+    opacity: 0.3;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+    margin-left: -90px;
+  }
+  
+  .project-name {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: #2F2F2F;
+    margin: 20px 100px;
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    margin: 0 80px;
+    margin-bottom: 100px;
+  }
+  .project-text button {
+    width: 160px;
+    background: transparent;
+    border: 3px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 1rem 1rem;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    margin: 0 80px;
+  }
+  .project-text button:hover {
+    background-color: rgb(1, 1, 1);
+    color: rgb(254, 254, 254);
+  }
+  .project-image {
+    flex: 1;
+    text-align: right;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .project-overlay-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 1.5rem;
+    text-align: right;
+    transform: translateY(100%);
+    clip-path: polygon(100% 100%, 100% 30%, 30% 100%);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 5px;
+  }
+  
+  .project-image:hover .project-overlay-container {
+    transform: translateY(0%);
+  }
+  .project-image img {
+    max-width: 100%;
+    height: 60vh;
+    /* box-shadow: 0px 4px 12px rgba(0,0,0,0.08); */
+    /* border-radius: 8px */
+  }
+  
+  @media (max-width: 768px) {
+    .project-composition,
+    .project-composition.reverse {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .project-image {
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+  

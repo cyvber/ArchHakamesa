@@ -8,9 +8,11 @@ import ViewProjectPage from './pages/project-view/ViewProjectPage';
 import ServicesListPage from './pages/services/ServicesListPage';
 import ContactPage from './pages/contact/ContactPage';
 import AboutPage from './pages/about/AboutPage';
-import ProjectList from './components/projects-list-main/ProjectList';
 import ServicesCarousel from './components/services-carousel/ServicesCarousel';
 import ContactSection from './components/contact-section/ContactSection';
+import ProjectSection from './sections/projects-section/ProjectSection';
+import AboutSection from './sections/about-section/AboutSection';
+import abouts from './assets/data/abouts';
 
 function App() {
   return (
@@ -20,18 +22,20 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
-              <header className="main-header">
-                <div className="parallax-bg"></div>
-                <div className="main-header-content">
-                  <IntroHeader />
+                <header className="main-header">
+                  <div className="parallax-bg"></div>
+                  <div className="main-header-content">
+                    <IntroHeader />
+                  </div>
+                </header>
+                <div className="main-body">
+                  <AboutSection />
+                  <ProjectSection />
+                  <ServicesCarousel />
+                  {/* <div className="buffer-section"><h2 className='buffer-section-description'>{abouts.conclusion}</h2></div> */}
+                  <ContactSection />
+                  <IntroFooter />
                 </div>
-              </header>
-              <div className="main-body">
-                <ProjectList />
-                <ServicesCarousel />
-                <ContactSection />
-                <IntroFooter />
-              </div>
             </>
           } />
           <Route path="/projects" element={<ProjectsListPage />} />

@@ -20,7 +20,10 @@ const ServicesCarousel: React.FC = () => {
 
   return (
     <div className="carousel-section">
-      <h2>DISCOVER OUR SERVICES</h2>
+        <div className="carousel-section-title">
+            <h2>DISCOVER OUR SERVICES</h2>
+            <hr />
+        </div>
       <div className="carousel-container">
         <button className="arrow-button" onClick={handleNext}>
           ▶

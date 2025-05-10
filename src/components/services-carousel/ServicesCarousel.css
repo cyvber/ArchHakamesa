@@ -1,9 +1,23 @@
 .carousel-section {
-    padding: 160px 0;
+    padding: 160px 180px;
+    background-color: #333333;
+    position: relative;
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+    margin-top: -40px;
+    color: white;
   }
-  .carousel-section h2 {
-    font-size: 28px;
+  .carousel-section-title {
     margin-bottom: 100px;
+  }
+  .carousel-section-title h2 {
+    font-size: 46px;
+    text-align: center;
+    color: #EFEFE9;
+  }
+  .carousel-section-title hr {
+    width: 560px;
+    border: 2px solid #EFEFE9;
+    border-radius: 10px;
   }
   .carousel-container {
     display: flex;
@@ -42,26 +56,27 @@
   .carousel-service-card {
     flex: 0 0 auto;
     width: 250px;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     padding: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
     text-align: center;
+    
   }
   
   .carousel-service-image {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     object-fit: contain;
     margin-bottom: 12px;
   }
   
   .carousel-service-name {
-    font-size: 1.1rem;
+    font-size: 22px;
     font-weight: bold;
     margin-bottom: 8px;
   }
   
   .carousel-service-description {
-    font-size: 0.95rem;
+    font-size: 18px;
   }
   

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './NavBar.css';
-import logo from '../../assets/logo/HakamEsa-logo.png'
+import logo from '../../assets/logo/HakamEsa-logo-notxt-trns-white.png'
 import menu from '../../assets/icons/menu.png';
 import closeIcon from '../../assets/icons/close.png'; 
 
@@ -29,8 +29,9 @@ const NavBar = () => {
           <Link to="/">ראשי</Link>
           <Link to="/projects">פרויקטים</Link>
           <Link to="/services">שירותים</Link>
-          <Link to="/about">אודות</Link>
-          <Link to="/contact">צור קשר</Link>
+          {/* <Link to="/about">אודות</Link> */}
+          <a href="#contact">צור קשר</a>
+          {/* <Link to="/contact">צור קשר</Link> */}
         </div>
 
         {/* Mobile Menu Icon */}

@@ -1,0 +1,36 @@
+
+.project-section {
+    /* padding: 2rem; */
+    padding-bottom: 150px;
+    margin: 0 auto;
+    background-color: #EFEFE9;
+    /* box-shadow: 0px -15px 100px #ffffff; */
+    margin-top: -50px;
+  }
+  
+  .project-section-title {
+    font-size: 46px;
+    text-align: center;
+    color: #333333;
+    
+  }
+  .project-section-title-container {
+    padding: 100px;
+    margin-bottom: 2rem;
+  }
+  .project-section-title-container hr {
+    width: 250px;
+    border: 2px solid #333333;
+    border-radius: 10px;
+  }
+  .project-section > *:not(:last-child) {
+    margin-bottom: 0px;
+  }
+  
+  .project-section-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    max-width: 900px;
+    padding: 5rem;
+  }

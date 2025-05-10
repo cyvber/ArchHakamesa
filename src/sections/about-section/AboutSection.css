@@ -1,0 +1,94 @@
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    box-shadow: 0px -10px 50px -10px#ffffff;
+    background: linear-gradient(#f9f9f9, #EFEFE9);  
+  }
+  
+
+
+  
+  .about-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding: 3rem;
+    box-sizing: border-box;
+  }
+  
+  /* Logo centered at top */
+  .about-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .about-logo img {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .about-bottom {
+    position: relative; /* Needed to contain the absolute watermark */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .about-bottom .watermark {
+    position: absolute;
+    left: 0;
+    bottom: 70px;
+    max-width: 400px;
+    width: 100%;
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+    margin-left: -120px;
+  }
+  
+  .about-text {
+    align-self: flex-start;
+    margin-top: 120px;
+    max-width: 900px;
+  }
+  
+  .about-section-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .about-section-text {
+    font-size: 24px;
+    line-height: 1.6;
+    color: #333;
+  }
+ 
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-text {
+      align-self: center;
+      text-align: center;
+    }
+  
+    .about-section-title {
+      font-size: 1.5rem;
+    }
+  
+    .about-section-text {
+      font-size: 0.95rem;
+    }
+  }
+  

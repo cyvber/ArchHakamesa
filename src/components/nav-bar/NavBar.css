@@ -11,7 +11,7 @@
   .navbar-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 40px;
+    padding: 10px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,24 +19,25 @@
   }
   
   .nav-logo {
-    height: 60px;
+    height: 100px;
     object-fit: contain;
   }
   
   .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 40px;
   }
   
   .nav-links a {
     text-decoration: none;
     color: white;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 22px;
     transition: color 0.3s ease;
   }
   
   .nav-links a:hover {
-    color: white;
+    color: rgb(11, 11, 11);
   }
   
   /* Hide menu icon by default (desktop) */

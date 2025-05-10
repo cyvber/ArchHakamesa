@@ -9,6 +9,7 @@
     align-items: flex-start;
     gap: 10px;
     text-align: right;
+    color: #333;
   }
   
   .header-item {
@@ -19,7 +20,7 @@
   
   .header-item hr {
     width: 50%;
-    border: 1px solid white;
+    border: 1px solid rgb(0, 0, 0);
     margin: 0;
   }
   
@@ -30,7 +31,7 @@
   }
   
   .field p {
-    color: #bbbbbb;
+    color: #787878;
     font-size: 20px;
     font-weight: 100;
     margin-bottom: 6px;
@@ -41,15 +42,15 @@
     width: 100%;
     padding: 0.8rem 1rem;
     border: 1px solid #b3b3b3;
-    border-radius: 0;
+    border-radius: 8px;
     outline: none;
     transition: border-color 0.3s ease;
   }
   
   .submit-btn {
     background: transparent;
-    border: 3px solid white;
-    color: white;
+    border: 3px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     padding: 20px 10px;
     font-size: 20px;
     cursor: pointer;
@@ -57,11 +58,13 @@
     border-radius: 0;
     width: 200px;
     margin-top: 20px;
+    align-self: flex-end;
+    margin-left: -30px;
   }
   
   .submit-btn:hover {
-    background-color: white;
-    color: black;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
   }
   
 @media (max-width: 800px) {
