@@ -52,7 +52,9 @@
   .carousel::-webkit-scrollbar {
     display: none; /* Chrome/Safari */
   }
-  
+  .vertical {
+    display: none;
+  }
   .carousel-service-card {
     flex: 0 0 auto;
     width: 250px;
@@ -78,5 +80,56 @@
   
   .carousel-service-description {
     font-size: 18px;
+  }
+  
+/* Existing styles remain unchanged above... */
+
+@media screen and (max-width: 768px) {
+    .carousel-section {
+      padding: 80px 20px;
+      clip-path: none;
+    }
+  
+    .carousel-section-title h2 {
+      font-size: 32px;
+    }
+  
+    .carousel-section-title hr {
+      width: 80%;
+      margin: auto;
+    }
+  
+    .carousel-container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .carousel {
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      overflow-x: hidden;
+      max-height: 80vh;
+      align-items: center;
+      scrollbar-width: auto;
+    }
+  
+    .arrow-button {
+      font-size: 1.5rem;
+    }
+    .vertical {
+        display: block;
+    }
+    .horizontal {
+        display: none;
+    }
+  
+    .carousel-service-card {
+      width: 90%;
+      max-width: 400px;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
   }
   

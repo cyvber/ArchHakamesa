@@ -8,15 +8,24 @@ const ServicesCarousel: React.FC = () => {
 
   const handlePrev = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      if (window.innerWidth <= 768) {
+        carouselRef.current.scrollBy({ top: -scrollAmount, behavior: 'smooth' });
+      } else {
+        carouselRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      }
     }
   };
-
+  
   const handleNext = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      if (window.innerWidth <= 768) {
+        carouselRef.current.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+      } else {
+        carouselRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
     }
   };
+  
 
   return (
     <div className="carousel-section">
@@ -25,8 +34,11 @@ const ServicesCarousel: React.FC = () => {
             <hr />
         </div>
       <div className="carousel-container">
-        <button className="arrow-button" onClick={handleNext}>
+        <button className="arrow-button horizontal" onClick={handleNext}>
           ▶
+        </button>
+        <button className="arrow-button vertical" onClick={handlePrev}>
+        ▲
         </button>
         <div className="carousel" ref={carouselRef}>
           {services.map((service, i) => (
@@ -37,8 +49,11 @@ const ServicesCarousel: React.FC = () => {
             </div>
           ))}
         </div>
-        <button className="arrow-button" onClick={handlePrev}>
+        <button className="arrow-button horizontal" onClick={handlePrev}>
         ◀
+        </button>
+        <button className="arrow-button vertical" onClick={handleNext}>
+        ▼
         </button>
       </div>
     </div>
