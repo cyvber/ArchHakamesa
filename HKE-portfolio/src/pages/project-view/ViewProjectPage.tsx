@@ -18,7 +18,7 @@ const ViewProjectPage: React.FC = () => {
   const [project, setProject] = useState<Project | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  const [deleting, setDeleting] = useState(false);
+  
 
   useEffect(() => {
     const fetchProject = async () => {
@@ -41,7 +41,7 @@ const ViewProjectPage: React.FC = () => {
     const confirmDelete = window.confirm('Are you sure you want to delete this project?');
     if (!confirmDelete) return;
 
-    setDeleting(true);
+    
     try {
       await axios.delete(`http://localhost:5000/api/projects/${project._id}`);
       alert('Project deleted successfully');
@@ -49,9 +49,7 @@ const ViewProjectPage: React.FC = () => {
     } catch (err: any) {
       console.error(err);
       alert('Failed to delete project');
-    } finally {
-      setDeleting(false);
-    }
+    } 
   };
 
   if (loading) return <div className="view-project-page">Loading...</div>;
