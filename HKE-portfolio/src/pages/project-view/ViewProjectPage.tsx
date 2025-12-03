@@ -23,7 +23,7 @@ const ViewProjectPage: React.FC = () => {
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/projects/${id}`);
+        const res = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/projects/${id}`);
         setProject(res.data);
       } catch (err: any) {
         console.error(err);
@@ -43,7 +43,7 @@ const ViewProjectPage: React.FC = () => {
 
     
     try {
-      await axios.delete(`http://localhost:5000/api/projects/${project._id}`);
+      await axios.delete(`${import.meta.env.VITE_SERVER_URL}/api/projects/${project._id}`);
       alert('Project deleted successfully');
       navigate('/projects'); // Redirect to projects list
     } catch (err: any) {

@@ -22,7 +22,7 @@ const ProjectsListPage: React.FC = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/projects'); // make sure CORS is enabled
+        const res = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/projects`); // make sure CORS is enabled
         setProjects(res.data);
       } catch (err: any) {
         console.error(err);

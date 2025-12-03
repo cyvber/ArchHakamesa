@@ -36,7 +36,7 @@ const AddProjectPage: React.FC = () => {
         formData.append('images', image);
       });
 
-      await axios.post('http://localhost:5000/api/projects', formData, {
+      await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/projects`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 

@@ -12,7 +12,7 @@ const app = express();
 connectDB();
 
 app.use(cors({
-  origin: 'http://localhost:5173', // allow your frontend origin
+  origin: 'https://archhakamesa.netlify.app', // allow your frontend origin
   methods: ['GET','POST','DELETE','PUT','PATCH'],
   credentials: true
 }));
