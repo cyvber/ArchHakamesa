@@ -20,16 +20,16 @@ const projectSchema = new mongoose.Schema(
       type: String, // optional video URL
     },
     land_size: {
-      type: Number,
+      type: String,
     },
     house_size: {
-      type: Number,
+      type: String,
     },
     build_duration: {
       type: String,
     },
     floors: {
-      type: Number,
+      type: String,
     },
     date: {
       type: Date,

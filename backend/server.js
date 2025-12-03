@@ -11,11 +11,13 @@ const app = express();
 // Connect to MongoDB
 connectDB();
 
+
 app.use(cors({
-  origin: 'https://archhakamesa.netlify.app', // allow your frontend origin
-  methods: ['GET','POST','DELETE','PUT','PATCH'],
+  origin: ['https://archhakamesa.netlify.app', 'http://localhost:5173'], // add your local dev URL here
+  methods: ['GET', 'POST', 'DELETE', 'PUT', 'PATCH'],
   credentials: true
 }));
+
 
 // Middleware to parse JSON request bodies
 app.use(express.json());

@@ -4,7 +4,17 @@ const cloudinary = require('../../config/cloudinary');
 // Create a new project
 exports.createProject = async (req, res) => {
   try {
-    const { title, description, date } = req.body;
+    const {
+      title,
+      description,
+      date,
+      video,
+      land_size,
+      house_size,
+      build_duration,
+      floors,
+    } = req.body;
+
     let images = [];
 
     // If files are uploaded, upload them to Cloudinary
@@ -17,7 +27,18 @@ exports.createProject = async (req, res) => {
       }
     }
 
-    const project = new Project({ title, description, date, images });
+    const project = new Project({
+      title,
+      description,
+      date,
+      images,
+      video,
+      land_size,
+      house_size,
+      build_duration,
+      floors,
+    });
+
     await project.save();
 
     res.status(201).json(project);
@@ -26,6 +47,7 @@ exports.createProject = async (req, res) => {
     res.status(500).json({ message: 'Server Error' });
   }
 };
+
 
 // Get all projects
 exports.getAllProjects = async (req, res) => {
@@ -66,11 +88,26 @@ exports.deleteProject = async (req, res) => {
         await cloudinary.uploader.destroy(`projects/${publicId}`);
       }
     }
-
     // Delete project from database
     await Project.findByIdAndDelete(req.params.id);
 
     res.status(200).json({ message: 'Project and its images deleted successfully' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server Error' });
+  }
+};
+
+
+// Get 3 latest projects
+exports.getLatestProjects = async (req, res) => {
+  try {
+    // Find projects, sort by createdAt descending, limit to 3
+    const projects = await Project.find()
+      .sort({ createdAt: -1 }) // newest first
+      .limit(3);
+
+    res.status(200).json(projects);
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Server Error' });
