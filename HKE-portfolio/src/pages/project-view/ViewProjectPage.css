@@ -34,7 +34,15 @@
     align-self: flex-start; 
 }
 
-
+.project-delete-button {
+    display: flex;
+    margin-top: 40px;
+    padding: 10px 20px;
+    background-color: #282828;
+    border: none;
+    border-radius: 5px;
+    max-width: 200px;
+}
 
 @media (max-width: 800px) {
     .view-project-page {

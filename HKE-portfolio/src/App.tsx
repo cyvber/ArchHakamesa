@@ -12,6 +12,7 @@ import ServicesCarousel from './components/services-carousel/ServicesCarousel';
 import ContactSection from './components/contact-section/ContactSection';
 import ProjectSection from './sections/projects-section/ProjectSection';
 import AboutSection from './sections/about-section/AboutSection';
+import AddProjectPage from './pages/add-project/AddProjectPage';
 // import abouts from './assets/data/abouts';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route path="/services" element={<ServicesListPage />} />
           <Route path="/contact" element={<ContactPage />}/>
           <Route path="/about" element={<AboutPage />}/>
+          <Route path="/add-project" element={<AddProjectPage />}/>
         </Routes>
       </div>
     </Router>
