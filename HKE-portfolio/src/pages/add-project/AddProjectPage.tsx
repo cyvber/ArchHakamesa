@@ -97,10 +97,10 @@ const AddProjectPage: React.FC = () => {
           {images.length > 0 && <p>נבחרו {images.length} תמונה/ות</p>}
         </div>
 
-        <div className="form-group">
+        {/* <div className="form-group">
           <label>וידאו (URL)</label>
           <input type="text" value={video} onChange={(e) => setVideo(e.target.value)} placeholder="https://..." />
-        </div>
+        </div> */}
 
         <div className="form-group">
           <label>גודל קרקע (מ"ר)</label>

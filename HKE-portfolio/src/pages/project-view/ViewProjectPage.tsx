@@ -76,13 +76,13 @@ const ViewProjectPage: React.FC = () => {
 
       <ProjectGallery images={project.images || []} />
 
-      {/* Hidden delete button */}
-      <div
+  
+      <button
         className="project-delete-button"
         onClick={handleDelete}
       >
-        
-      </div>
+        Delete
+      </button>
     </div>
   );
 };
