@@ -1,0 +1,85 @@
+.admin-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.admin-login-box {
+  background: #ffffff;
+  color: #333;
+  padding: 35px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.4s ease-in-out;
+
+}
+
+.admin-login-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.input-group input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 15px;
+  transition: border 0.2s ease;
+}
+
+.input-group input:focus {
+  border-color: #0077ff;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #0077ff;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s ease;
+}
+
+.login-btn:hover {
+  background: #005fcc;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

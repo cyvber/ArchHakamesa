@@ -1,12 +1,17 @@
 const express = require('express');
 const connectDB = require('./config/db');
-const projectRoutes = require('./api/routes/ProjectRoutes');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const bcrypt = require("bcryptjs");
+
+const projectRoutes = require('./api/routes/ProjectRoutes');
+const authRoutes = require('./api/routes/AuthRoutes');
 
 dotenv.config(); // Load environment variables
 
 const app = express();
+
+
 
 // Connect to MongoDB
 connectDB();
@@ -27,7 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use('/api/projects', projectRoutes); // Mount the project routes
-
+app.use('/api/auth', authRoutes); // Mount the auth routes
 // Test route
 app.get('/', (req, res) => {
     res.send('MongoDB is connected and server is running!');

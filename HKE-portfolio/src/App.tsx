@@ -13,6 +13,8 @@ import ContactSection from './components/contact-section/ContactSection';
 import ProjectSection from './sections/projects-section/ProjectSection';
 import AboutSection from './sections/about-section/AboutSection';
 import AddProjectPage from './pages/add-project/AddProjectPage';
+import AdminLogin from './components/admin-login/AdminLogin';
+import ProtectedRoute from './util/ProtectedRoute';
 // import abouts from './assets/data/abouts';
 
 function App() {
@@ -44,7 +46,13 @@ function App() {
           <Route path="/services" element={<ServicesListPage />} />
           <Route path="/contact" element={<ContactPage />}/>
           <Route path="/about" element={<AboutPage />}/>
-          <Route path="/add-project" element={<AddProjectPage />}/>
+          <Route path="/add-project" element={
+            <ProtectedRoute>
+              <AddProjectPage />
+            </ProtectedRoute>
+            }
+          />
+          <Route path="/admin-login" element={<AdminLogin />}/>
         </Routes>
       </div>
     </Router>

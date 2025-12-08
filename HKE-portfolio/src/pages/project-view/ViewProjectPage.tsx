@@ -2,6 +2,7 @@ import './ViewProjectPage.css';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import api from '../../api/axiosInstance';
 import ProjectGallery from '../../components/project-gallery/ProjectGallery';
 
 interface Project {
@@ -18,7 +19,7 @@ const ViewProjectPage: React.FC = () => {
   const [project, setProject] = useState<Project | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  
+  const token = localStorage.getItem("token");
 
   useEffect(() => {
     const fetchProject = async () => {
@@ -43,7 +44,7 @@ const ViewProjectPage: React.FC = () => {
 
     
     try {
-      await axios.delete(`${import.meta.env.VITE_SERVER_URL}/api/projects/${project._id}`);
+      api.delete(`${import.meta.env.VITE_SERVER_URL}/api/projects/${project._id}`);
       alert('Project deleted successfully');
       navigate('/projects'); // Redirect to projects list
     } catch (err: any) {
@@ -76,13 +77,9 @@ const ViewProjectPage: React.FC = () => {
 
       <ProjectGallery images={project.images || []} />
 
-  
-      <button
-        className="project-delete-button"
-        onClick={handleDelete}
-      >
-        Delete
-      </button>
+      {token && (
+        <button className="project-delete-button" onClick={handleDelete}>מחק</button>
+      )}
     </div>
   );
 };

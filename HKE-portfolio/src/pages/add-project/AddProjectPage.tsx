@@ -1,5 +1,5 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
-import axios from 'axios';
+import api from '../../api/axiosInstance';
 import './AddProjectPage.css';
 
 const AddProjectPage: React.FC = () => {
@@ -46,9 +46,10 @@ const AddProjectPage: React.FC = () => {
         formData.append('images', image);
       });
 
-      await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/projects`, formData, {
+      await api.post(`/api/projects`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
+
 
       setMessage('הפרויקט נוצר בהצלחה!');
       // Reset form
